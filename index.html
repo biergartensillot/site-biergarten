@@ -3,52 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Chiringuito de playa en Mallorca - carta, fotos y contacto." />
-  <title>Chiringuito Mallorca</title>
+  <meta name="description" content="Biergarten Café-Bar – el chiringuito de S'illot, Mallorca. Brunch artesanal, cócteles tropicales y música en vivo." />
+  <title>Biergarten Café-Bar – S'illot, Mallorca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="brand">Chiringuito Mallorca</a>
-      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      <a href="#home" class="brand">
+        <img src="images/logo.jpg" alt="Biergarten Café-Bar" class="brand-logo" />
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú">&#9776;</button>
       <nav class="main-nav">
         <a href="#home">Inicio</a>
         <a href="#fotos">Fotos</a>
         <a href="#cardapio">Carta</a>
+        <a href="#eventos">Eventos</a>
         <a href="#contato">Contacto</a>
       </nav>
     </div>
   </header>
 
   <main>
+
     <section id="home" class="hero-section">
-      <div class="container hero-content">
-        <p class="eyebrow">Chiringuito de playa</p>
-        <h1>Sabores del mar y buen ambiente en Mallorca</h1>
-        <p>Un lugar relajado con cócteles, tapas y vistas a la playa. Perfecto para desconectar en verano.</p>
+      <div class="hero-content container">
+        <img src="images/logo.jpg" alt="Biergarten Café-Bar" class="hero-logo" />
+        <p class="eyebrow">Chiringuito de S'illot &middot; Mallorca</p>
+        <h1>Bienvenido al<br><em>Biergarten</em></h1>
+        <p>Brunch artesanal, cócteles tropicales y música en vivo bajo el sol de Mallorca.</p>
         <div class="hero-actions">
           <a href="#cardapio" class="btn btn-primary">Ver carta</a>
           <a href="#contato" class="btn btn-secondary">Reservar mesa</a>
         </div>
       </div>
+      <div class="hero-scroll" aria-hidden="true">&#8595;</div>
     </section>
+
+    <div class="features-bar">
+      <div class="container features-inner">
+        <div class="feature-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          <span>Brunch &amp; Café</span>
+        </div>
+        <div class="feature-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 22H16"/><path d="M7 10H17"/><path d="M12 10V2"/><path d="M5 10C5 16 8 20 12 20s7-4 7-10"/></svg>
+          <span>Cocktails &amp; Caipirinhas</span>
+        </div>
+        <div class="feature-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="2"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          <span>Música en Vivo</span>
+        </div>
+        <div class="feature-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Terraza Exterior</span>
+        </div>
+      </div>
+    </div>
 
     <section id="fotos" class="section section-gallery">
       <div class="container">
         <div class="section-title">
           <span>Galería</span>
-          <h2>Momentos del chiringuito</h2>
+          <h2>El ambiente del Biergarten</h2>
         </div>
         <div class="gallery-grid">
-          <div class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Drink na praia" />
+          <div class="gallery-card gallery-card--tall">
+            <img src="images/local (3).jpeg" alt="Bar do Biergarten com insígnia e balcão de madeira" loading="lazy" />
           </div>
           <div class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=800&q=80" alt="Frutos do mar" />
+            <img src="images/comida (5).jpeg" alt="Brunch artesanal com tostadas e café Biergarten" loading="lazy" />
           </div>
           <div class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=800&q=80" alt="Mesa na praia" />
+            <img src="images/comida (1).jpeg" alt="Bandeja de brunch completo com frutas e pães" loading="lazy" />
+          </div>
+          <div class="gallery-card">
+            <img src="images/local (1).jpeg" alt="Área externa com mesas e gramado verde" loading="lazy" />
+          </div>
+          <div class="gallery-card">
+            <img src="images/local (8).jpeg" alt="Espaço exterior com guarda-sol de palha" loading="lazy" />
           </div>
         </div>
       </div>
@@ -62,62 +99,136 @@
         </div>
         <div class="menu-grid">
           <article class="menu-card">
-            <h3>Tapas y entrantes</h3>
+            <div class="menu-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <h3>Tapas</h3>
             <ul>
-              <li>Pa amb oli<span>€8</span></li>
-              <li>Calamares fritos<span>€12</span></li>
-              <li>Patatas bravas<span>€7</span></li>
+              <li>Chipirones rebozados<span>€12</span></li>
+              <li>Gambas al pillo<span>€12,50</span></li>
+              <li>Bruschetta de cabra<span>€10,50</span></li>
+              <li>Alitas picantes<span>€10,50</span></li>
+              <li>Pan y alioli<span>€3</span></li>
+              <li>Patatas fritas<span>€4</span></li>
             </ul>
           </article>
           <article class="menu-card">
+            <div class="menu-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
             <h3>Platos principales</h3>
             <ul>
-              <li>Arroz negro<span>€16</span></li>
-              <li>Gambas al ajillo<span>€14</span></li>
-              <li>Ensalada de pulpo<span>€13</span></li>
+              <li>Entrecot de ternera<span>€18</span></li>
+              <li>Cordón Blue<span>€16</span></li>
+              <li>Escalope de cerdo<span>€14</span></li>
+              <li>Espaguetis gambas<span>€15</span></li>
+              <li>Espaguetis frutti di mare<span>€16</span></li>
+              <li>Hamburguesa queso de cabra<span>€13</span></li>
             </ul>
           </article>
           <article class="menu-card">
-            <h3>Bebidas</h3>
+            <div class="menu-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 22H16"/><path d="M7 10H17"/><path d="M12 10V2"/><path d="M5 10C5 16 8 20 12 20s7-4 7-10"/></svg>
+            </div>
+            <h3>Bebidas &amp; Postres</h3>
             <ul>
-              <li>Sangría<br><span>copas desde €6</span></li>
               <li>Caipiriña<span>€8</span></li>
-              <li>Cerveza local<span>€4</span></li>
+              <li>Combinados (Ron/Gin/Whisky)<span>€7</span></li>
+              <li>Cerveza Estrella Damm<span>€2,50</span></li>
+              <li>Zumo naranja natural<span>€5</span></li>
+              <li>Tarta de chocolate<span>€5</span></li>
+              <li>Tiramisú<span>€6</span></li>
             </ul>
           </article>
         </div>
-        <p class="menu-note">Sustituye estos platos por tu carta oficial y añade los precios reales.</p>
+
+        <div class="cardapio-full">
+          <div class="section-title" style="text-align:center; justify-items:center;">
+            <span>Carta completa</span>
+            <h2>Ver todos los platos y precios</h2>
+          </div>
+          <img src="images/cardapio.jpeg" alt="Carta completa del Biergarten Café-Bar" class="cardapio-img" />
+        </div>
+      </div>
+    </section>
+
+    <section id="eventos" class="section section-events">
+      <div class="container events-inner">
+        <div class="events-image">
+          <img src="images/show.jpeg" alt="Roda de Samba en el Biergarten – música ao vivo con el Grupo Samba da Ilha" loading="lazy" />
+        </div>
+        <div class="events-content">
+          <div class="section-title">
+            <span>Eventos</span>
+            <h2>Música y show en vivo</h2>
+          </div>
+          <p>El Biergarten es también el escenario de las mejores noches de S'illot. Desde sambas brasileñas hasta actuaciones en directo, siempre hay algo especial pasando.</p>
+          <ul class="events-list">
+            <li>
+              <strong>Roda de Samba</strong>
+              <span>Con el Grupo Samba da Ilha &ndash; las mejores músicas brasileñas en directo</span>
+            </li>
+            <li>
+              <strong>Shows en directo</strong>
+              <span>Tardes y noches con artistas locales e internacionales</span>
+            </li>
+            <li>
+              <strong>Caipiriñas &amp; Feijoada</strong>
+              <span>Noches temáticas con cocina y bebidas brasileñas</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/34622554319" target="_blank" rel="noreferrer" class="btn btn-primary">
+            Consultar próximos eventos
+          </a>
+        </div>
       </div>
     </section>
 
     <section id="contato" class="section section-contact">
       <div class="container contact-grid">
         <div class="contact-card">
-          <h2>Contacto</h2>
-          <p>Te esperamos en la playa con el mejor ambiente y buena música.</p>
+          <h2>Visítanos</h2>
+          <p>Te esperamos con el mejor ambiente, buena música y cócteles artesanales.</p>
           <ul>
-            <li><strong>Dirección:</strong> Playa de Palma, Mallorca</li>
-            <li><strong>Teléfono:</strong> <a href="tel:+34912345678">+34 912 345 678</a></li>
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/34912345678" target="_blank" rel="noreferrer">Enviar mensaje</a></li>
-            <li><strong>Horario:</strong> Lun-Dom 10:00 - 23:00</li>
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>Dirección</strong><br>Carrer Llevant 13, S'illot, Mallorca</div>
+            </li>
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.16 6.16l.55-.54a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.27 17z"/></svg>
+              <div><strong>Teléfono / WhatsApp</strong><br><a href="tel:+34622554319">622 554 319</a></div>
+            </li>
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div><strong>Horario</strong><br>Lunes a Domingo &nbsp;10:00 &ndash; 23:00</div>
+            </li>
+            <li>
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <div><strong>Instagram</strong><br><a href="https://www.instagram.com/biergarten_sillot/" target="_blank" rel="noreferrer">@biergarten_sillot</a></div>
+            </li>
           </ul>
-          <a href="mailto:contato@chiringuitomallorca.com" class="btn btn-primary">Enviar correo</a>
+          <a href="https://wa.me/34622554319" target="_blank" rel="noreferrer" class="btn btn-primary">
+            Reservar por WhatsApp
+          </a>
         </div>
         <div class="contact-map">
           <iframe
-            title="Localização do chiringuito"
-            src="https://www.google.com/maps?q=39.5696,2.6502&z=15&output=embed"
+            title="Ubicación del Biergarten en S'illot, Mallorca"
+            src="https://www.google.com/maps?q=Carrer+Llevant+13,+S%27illot,+Mallorca&z=16&output=embed"
             allowfullscreen=""
             loading="lazy"></iframe>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Chiringuito Mallorca</p>
-      <p>Hecho para publicarse en Netlify.</p>
+      <p>&copy; <span id="year"></span> Biergarten Café-Bar &middot; S'illot, Mallorca</p>
+      <a href="https://www.instagram.com/biergarten_sillot/" target="_blank" rel="noreferrer" class="footer-link">
+        @biergarten_sillot
+      </a>
     </div>
   </footer>
 
