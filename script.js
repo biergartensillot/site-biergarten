@@ -1,27 +1,52 @@
-const navToggle = document.querySelector('.nav-toggle');
-const mainNav = document.querySelector('.main-nav');
-const yearOutput = document.getElementById('year');
+const nav = document.querySelector(".main-nav");
+document.querySelector(".nav-toggle").addEventListener("click", () => nav.classList.toggle("open"));
+document.querySelectorAll(".main-nav a").forEach(link => link.addEventListener("click", () => nav.classList.remove("open")));
+document.querySelector("#year").textContent = new Date().getFullYear();
 
-if (navToggle && mainNav) {
-  navToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('open');
-  });
+const track = document.querySelector(".event-track");
+const eventCards = [...track.querySelectorAll(".event-card")];
+let eventIndex = 0;
+let autoSlide;
+function showEvent(index) {
+  eventIndex = (index + eventCards.length) % eventCards.length;
+  track.scrollTo({ left: eventCards[eventIndex].offsetLeft - track.offsetLeft, behavior: "smooth" });
+  renderFeaturedEvent(eventIndex);
 }
-
-if (yearOutput) {
-  yearOutput.textContent = new Date().getFullYear();
+function startCarousel() {
+  clearInterval(autoSlide);
+  const progress = document.querySelector(".carousel-progress span");
+  if (progress) { progress.style.animation = "none"; progress.offsetHeight; progress.style.animation = "progress 5s linear infinite"; }
+  autoSlide = setInterval(() => showEvent(eventIndex + 1), 5000);
 }
+document.querySelector(".rail-next").addEventListener("click", () => { showEvent(eventIndex + 1); startCarousel(); });
+document.querySelector(".rail-prev").addEventListener("click", () => { showEvent(eventIndex - 1); startCarousel(); });
+track.addEventListener("pointerenter", () => clearInterval(autoSlide));
+track.addEventListener("pointerleave", startCarousel);
+startCarousel();
 
-const navLinks = document.querySelectorAll('.main-nav a');
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    if (mainNav.classList.contains('open')) {
-      mainNav.classList.remove('open');
-    }
+async function loadGoogleReviews() {
+  if (location.protocol === "file:") return;
+  try {
+    const response = await fetch("/api/google-reviews");
+    if (!response.ok) return;
+    const data = await response.json();
+    if (!Array.isArray(data.reviews) || !data.reviews.length) return;
+    if (data.rating) document.querySelector(".score-line>strong").textContent = Number(data.rating).toFixed(1);
+    const cards = document.querySelector(".review-cards");
+    cards.innerHTML = data.reviews.slice(0, 2).map(review => `<article><div class="stars">${"★".repeat(Math.round(review.rating || 5))}</div><p>${review.text}</p><div class="review-author"><b>${review.author_name || "Google"}</b><small>${review.relative_time_description || "Google Review"}</small></div></article>`).join("");
+  } catch (_) {
+    // The designed fallback stays visible until the secure Google endpoint is configured.
+  }
+}
+loadGoogleReviews();
+
+document.querySelectorAll(".menu-tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".menu-tab,.menu-panel").forEach(item => item.classList.remove("active"));
+    tab.classList.add("active");
+    document.querySelector(`[data-panel="${tab.dataset.menu}"]`).classList.add("active");
   });
 });
-<<<<<<< Updated upstream
-=======
 
 const translations = {
   pt: {
@@ -198,4 +223,3 @@ const languageSelect=document.querySelector("#languageSelect");
 languageSelect.value=localStorage.getItem("biergarten-language")||"pt";
 setLanguage(languageSelect.value);
 languageSelect.addEventListener("change",e=>setLanguage(e.target.value));
->>>>>>> Stashed changes
